@@ -19,7 +19,7 @@ if st.button("Yangiliklarni qidirish"):
     res = requests.get(url, params=params)
     data = res.json()
 
-    for article in data["articles"][:5]:
+    for article in data["articles"][:25]:
         st.write("###", article["title"])
         st.write(article["source"]["name"])
         st.write(article["url"])
